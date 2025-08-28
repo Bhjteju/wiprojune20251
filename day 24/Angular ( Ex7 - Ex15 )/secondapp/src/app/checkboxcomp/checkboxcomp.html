@@ -1,0 +1,81 @@
+
+<!-- >>>>>>>>>>>>>>>>> Ex:-11 >>>>>>>>>>>>>>>>>> -->
+<!-- <h3>Show / Hide Example</h3>
+
+<label>
+  <input type="checkbox" (change)="toggle()"> Show Message
+</label>
+
+<div *ngIf="isVisible" class="alert alert-info mt-2">
+    The message is now visible!
+</div> -->
+
+
+
+<!-- >>>>>>>>>>>>>>>>> Ex:-12 >>>>>>>>>>>>>>>>>> -->
+
+<!-- <h3>Country Dropdown</h3>
+
+<button (click)="loadCountries()">Load</button>
+
+<select>
+  @if (dropdownList.length > 0) {
+    @for (country of dropdownList; track country) {
+    <option>
+        {{ country }}
+    </option>
+    }
+  }
+</select> -->
+
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> Ex:-13 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+<!-- <h3>Pick a Color</h3>
+
+<select [(ngModel)]="color">
+  <option value="red">Red</option>
+  <option value="green">Green</option>
+  <option value="blue">Blue</option>
+  <option value="default">Default</option>
+</select>
+
+<br><br>
+
+@switch (color) {
+  @case ("red") {
+    <div style="color:red;">Red Color</div>
+  }
+  @case ("green") {
+    <div style="color:green;">Green Color</div>
+  }
+  @case ("blue") {
+    <div style="color:blue;">Blue Color</div>
+  }
+  @default {
+    <div>Default Color</div>
+  }
+} -->
+
+
+<!-- >>>>>>>>>>>>>>>>> Ex:-14 >>>>>>>>>>>>>>>>>> -->
+
+<!-- <h3>Search Filter</h3>
+
+>
+<input type="text" [(ngModel)]="searchText" placeholder="Type a name..." class="form-control w-50">
+
+<br>
+
+
+<select size="5" class="form-select w-50">
+  @for (name of names; track name) {
+    @if (name.toLowerCase().startsWith(searchText.toLowerCase())) {
+      <option>{{ name }}</option>
+    }
+  }
+</select> -->
+
+<app-ex15-homecomp></app-ex15-homecomp>
+
+
+
