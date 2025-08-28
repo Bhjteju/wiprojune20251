@@ -1,0 +1,7 @@
+<div class="container mt-5 text-center">
+  <h4>Delete Product</h4>
+  <p *ngIf="id">Are you sure you want to delete Product ID: <strong>{{ id }}</strong>?</p>
+  
+  <button class="btn btn-danger me-2" (click)="confirmDelete()">Yes, Delete</button>
+  <button class="btn btn-secondary" (click)="cancel()">Cancel</button>
+</div>

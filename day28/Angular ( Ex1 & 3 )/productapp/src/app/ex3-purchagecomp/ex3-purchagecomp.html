@@ -1,0 +1,61 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8 col-sm-12">
+      <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white text-center">
+          <h4 class="mb-0">Place an Order</h4>
+        </div>
+        <div class="card-body">
+
+          <div class="mb-3">
+            <label for="productSelect" class="form-label">Product:</label>
+            <select
+              id="productSelect"
+              class="form-select"
+              [(ngModel)]="selectedProductId"
+              (change)="onProductSelect(selectedProductId)"
+              name="selectedProductId"
+              required
+            >
+              <option value="">-- Select Product --</option>
+              <option *ngFor="let p of products" [value]="p.id">
+                {{p.name}} (Available: {{p.qty}})
+              </option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="quantityInput" class="form-label">Quantity:</label>
+            <input
+              type="number"
+              id="quantityInput"
+              class="form-control"
+              [(ngModel)]="purchaseQty"
+              [max]="selectedProduct ? selectedProduct.qty : 0"
+              min="1"
+              name="purchaseQty"
+              required
+            />
+            <div *ngIf="selectedProduct && purchaseQty > selectedProduct.qty" class="text-danger mt-1">
+              Only {{selectedProduct.qty}} items available.
+            </div>
+          </div>
+
+    
+          <div class="d-grid mb-2">
+            <button
+              class="btn btn-success btn-lg"
+              [disabled]="!selectedProduct || purchaseQty <= 0 || (selectedProduct && purchaseQty > selectedProduct.qty)"
+              (click)="placeOrder()"
+            >
+              Place Order
+            </button>
+          </div>
+
+          <p *ngIf="message" class="text-center text-success">{{message}}</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
