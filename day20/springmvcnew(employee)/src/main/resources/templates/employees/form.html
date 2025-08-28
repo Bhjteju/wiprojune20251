@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{fragments/layout}">
+<body>
+
+<div layout:fragment="content">
+    <h2 th:text="${employee.id == null} ? 'Add Employee' : 'Edit Employee'"></h2>
+
+    <form th:action="${employee.id == null} ? @{/employees} : @{/employees/{id}(id=${employee.id})}"
+          method="post" th:object="${employee}">
+
+        <label>Name:</label>
+        <input type="text" th:field="*{name}" required/><br/>
+
+        <label>Email:</label>
+        <input type="email" th:field="*{email}" required/><br/>
+
+        <label>Employment Type:</label>
+        <select th:field="*{type}">
+            <option th:each="t : ${types}" th:value="${t}" th:text="${t}"></option>
+        </select><br/>
+
+        <label>Department:</label>
+        <select th:field="*{department.id}">
+            <option value="">-- Select Department --</option>
+            <option th:each="dept : ${departments}" th:value="${dept.id}" th:text="${dept.name}"></option>
+        </select><br/>
+
+        <h3>Address</h3>
+        <label>Line:</label>
+        <input type="text" th:field="*{address.line}"/><br/>
+        <label>City:</label>
+        <input type="text" th:field="*{address.city}"/><br/>
+        <label>State:</label>
+        <input type="text" th:field="*{address.state}"/><br/>
+        <label>Pincode:</label>
+        <input type="text" th:field="*{address.pincode}"/><br/><br/>
+
+        <button type="submit">Save</button>
+    </form>
+
+    <br/>
+    <a th:href="@{/employees}">Back to List</a>
+</div>
+
+</body>
+</html>

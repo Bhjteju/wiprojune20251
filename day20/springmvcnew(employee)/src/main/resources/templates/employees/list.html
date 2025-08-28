@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{fragments/layout}">
+<body>
+
+<div layout:fragment="content">
+    <h2>Employee List</h2>
+
+    <a th:href="@{/employees/new}">Add Employee</a>
+    <br/><br/>
+
+    <!-- Search -->
+    <form th:action="@{/employees}" method="get">
+        <input type="text" name="q" th:value="${query}" placeholder="Search by name"/>
+        <button type="submit">Search</button>
+    </form>
+    <br/>
+
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Employment Type</th>
+            <th>Department</th>
+            <th>Address</th>
+            <th>Actions</th>
+        </tr>
+        <tr th:each="employee : ${employees}">
+            <td th:text="${employee.id}"></td>
+            <td th:text="${employee.name}"></td>
+            <td th:text="${employee.email}"></td>
+            <td th:text="${employee.type}"></td>
+            <td th:text="${employee.department != null ? employee.department.name : 'N/A'}"></td>
+            <td th:text="${employee.address != null ? employee.address.line + ', ' + employee.address.city : 'N/A'}"></td>
+            <td>
+                <a th:href="@{/employees/{id}/edit(id=${employee.id})}">Edit</a>
+                |
+                <form th:action="@{/employees/{id}/delete(id=${employee.id})}" method="post" style="display:inline">
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>

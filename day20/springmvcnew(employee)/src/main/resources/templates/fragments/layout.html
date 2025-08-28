@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <title>Employee Management System</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<header>
+    <h1>Employee Management System</h1>
+    <nav>
+        <a th:href="@{/employees}">Employees</a> |
+        <a th:href="@{/departments}">Departments</a>
+    </nav>
+    <hr/>
+</header>
+
+<main layout:fragment="content">
+    <!-- Page-specific content goes here -->
+</main>
+
+<footer>
+    <hr/>
+    <p>&copy; 2025 My Company</p>
+</footer>
+
+</body>
+</html>
