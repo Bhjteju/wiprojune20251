@@ -1,0 +1,32 @@
+
+<div class="text-center my-4">
+  <h1 class="fw-bold"> List of Fruits </h1>
+  <hr class="w-50 mx-auto">
+</div>
+
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> Ex-6 >>>>>>>>>>>>>> -->
+<!-- <div class="container my-4">
+  <div class="row g-4">
+    <div class="col-md-4" *ngFor="let item of fruits">
+      <app-display-listcomp [fruit]="item"></app-display-listcomp>
+    </div>
+  </div>
+</div> -->
+
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> Ex-7 >>>>>>>>>>>>>> -->
+
+<div class="row g-3">
+  <div class="col-md-4" *ngFor="let fruit of fruits">
+    <app-display-listcomp
+      [fruit]="fruit"
+      (remove)="handleRemoveFruit($event)">
+    </app-display-listcomp>
+  </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,29 @@
+
+/* >>>>>>>>>>>>> Ex:-2 >>>>>>>>>>>>>>>> */
+/* .app1 {
+  color: white;
+  background-color: green;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.app2 {
+  color: black;
+  background-color: yellow;
+  padding: 10px;
+  border-radius: 5px;
+} */
+
+/* >>>>>>>>>>>>> Ex:-3 >>>>>>>>>>>>>>>> */
+
+.app1 {
+  background-color: lightblue;
+  padding: 10px;
+  border: 2px solid blue;
+}
+
+.app2 {
+  background-color: lightgreen;
+  padding: 10px;
+  border: 2px solid green;
+}

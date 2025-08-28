@@ -1,0 +1,21 @@
+/* .fruit-card {
+  width: 18rem;
+  margin: 10px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.fruit-img {
+  height: 200px;           
+  object-fit: cover;       
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+} */
+
+.fruit-img {
+  height: 200px;        /* fix image height */
+  object-fit: cover;    /* crop nicely instead of stretching */
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+

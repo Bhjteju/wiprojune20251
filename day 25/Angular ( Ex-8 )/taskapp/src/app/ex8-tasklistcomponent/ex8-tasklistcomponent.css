@@ -1,0 +1,49 @@
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.task-table th,
+.task-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.task-table th {
+  background-color: rgb(245, 161, 6);
+  color: #fff;
+}
+
+.task-table button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.task-table button:hover {
+  background-color: #b02a37;
+}
+
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.task-table th,
+.task-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+
+.task-table td:first-child {
+  max-width: 300px;               
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+}
+

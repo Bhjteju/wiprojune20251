@@ -1,0 +1,18 @@
+<table class="task-table">
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Category</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let task of tasks; index as i">
+      <td>{{ task.description }}</td>
+      <td>{{ task.category }}</td>
+      <td>
+        <button (click)="onDelete(i)">delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

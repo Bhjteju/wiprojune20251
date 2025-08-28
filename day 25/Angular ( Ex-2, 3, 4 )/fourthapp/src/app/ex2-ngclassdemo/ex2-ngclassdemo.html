@@ -1,0 +1,53 @@
+
+<!-- >>>>>>>>>>>>>>> Ex-2 >>>>>>>>>>>>>>>>> -->
+
+<!-- <p>ex2-ngclassdemo works!</p> -->
+
+<!-- 1. Using string -->
+<!-- <p [ngClass]="'app1'">This is using string (app1 applied)</p> -->
+
+<!-- 2. Using array -->
+<!-- <p [ngClass]="['app1', 'app2']">This is using array (both applied)</p> -->
+
+<!-- 3. Using object -->
+<!-- <p [ngClass]="{'app1': flag1, 'app2': flag2}">
+  This is using object (app1 applied because flag1=true, flag2=false)
+</p> -->
+
+<!-- Toggle flags -->
+<!-- <button (click)="flag1 = !flag1">Toggle App1</button>
+<button (click)="flag2 = !flag2">Toggle App2</button> -->
+
+<!-- >>>>>>>>>>>>>>> Ex-3 >>>>>>>>>>>>>>>>> -->
+
+<!-- <h2>NgClass Demo with Function</h2>
+
+<div [ngClass]="getNgClass()">
+  This div gets classes dynamically!
+</div>
+
+<button (click)="toggleFlags()">Toggle Classes</button> -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>>>>>>> Ex-4 >>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+
+<h2>NgStyle Demo</h2>
+
+<!-- Inline model -->
+<div [ngStyle]="{'color': getColor(), 'font-size': '30px'}">
+  Inline model → Purple when flag1=true, Green when flag1=false
+</div>
+
+<br>
+
+<!-- Ternary operator model -->
+<div [ngStyle]="{'color': flag1 ? 'purple' : 'green', 'font-size': '20px'}">
+  Ternary operator model → Purple when flag1=true, Green when flag1=false
+</div>
+
+<br>
+
+<!-- <button (click)="toggleFlag()">Toggle Flag</button> -->
+
+
+

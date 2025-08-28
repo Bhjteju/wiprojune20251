@@ -1,0 +1,10 @@
+<div class="container">
+  <h2>Task Management App</h2>
+
+  <app-ex8-taskcomponent (taskAdded)="onTaskAdded($any($event))"></app-ex8-taskcomponent>
+
+  <app-ex8-tasklistcomponent
+    [tasks]="tasks"
+    (deleteTask)="deleteTask($event)">
+</app-ex8-tasklistcomponent>
+</div>
