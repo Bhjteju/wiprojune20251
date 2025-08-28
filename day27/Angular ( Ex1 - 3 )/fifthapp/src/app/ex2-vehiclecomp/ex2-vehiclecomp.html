@@ -1,0 +1,62 @@
+<!-- <h2>Vehicle List</h2>
+
+<table border="1" cellpadding="6">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Make</th>
+      <th>Fuel Type</th>
+      <th>Model</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let v of vehicles; let i = index">
+      <td>{{ v.id }}</td>
+      <td>{{ v.make }}</td>
+      <td>{{ v.fuelType }}</td>
+      <td>{{ v.model }}</td>
+      <td>{{ v.price }}</td>
+    </tr>
+  </tbody>
+</table> -->
+
+<!-->>>>>>>>>>>>>>>>>>>>>>>>>>>>> Ex-2(above also) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+
+<!-- <h2>Vehicle List</h2>
+
+<div *ngFor="let v of vehicles; let i = index">
+  <p>
+    {{ i + 1 }}. {{ v.make }} - {{ v.model }} ({{ v.fuelType }}) → ₹{{ v.price }}
+  </p>
+</div> -->
+
+<!-->>>>>>>>>>>>>>>>>>>>>>>>>>>>> Ex-3 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+
+<h2>Vehicle List</h2>
+<div *ngFor="let v of vehicles">
+  <p>
+    {{v.id}}. {{v.make}} - {{v.model}} ({{v.fuelType}}) → ₹{{v.price}}
+    <button (click)="edit(v.id)">Edit</button>
+    <button (click)="delete(v.id)">Delete</button>
+  </p>
+</div>
+
+<div *ngIf="vehicleEdit">
+  <h3>Edit Vehicle</h3>
+  <input [(ngModel)]="vehicleEdit.make" placeholder="Make">
+  <input [(ngModel)]="vehicleEdit.model" placeholder="Model">
+  <input [(ngModel)]="vehicleEdit.fuelType" placeholder="Fuel Type">
+  <input [(ngModel)]="vehicleEdit.price" type="number" placeholder="Price">
+  <button (click)="update()">Update</button>
+</div>
+
+<h3>Add Vehicle</h3>
+<input [(ngModel)]="vehicleAdd.make" placeholder="Make">
+<input [(ngModel)]="vehicleAdd.model" placeholder="Model">
+<input [(ngModel)]="vehicleAdd.fuelType" placeholder="Fuel Type">
+<input [(ngModel)]="vehicleAdd.price" type="number" placeholder="Price">
+<button (click)="save()">Save</button>
+
+
+

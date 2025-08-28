@@ -1,0 +1,46 @@
+{
+  "vehicles": [
+    {
+      "id": "1",
+      "make": "Toyota",
+      "fuelType": "Petrol",
+      "model": "Crysta",
+      "price": 12000
+    },
+    {
+      "id": "2",
+      "make": "Hyundai",
+      "fuelType": "Diesel",
+      "model": "Creta",
+      "price": 15000
+    },
+    {
+      "id": "3",
+      "make": "Maruti Suzuki",
+      "fuelType": "Gas",
+      "model": "Desire",
+      "price": 35000
+    },
+    {
+      "id": "4",
+      "make": "Toyota",
+      "fuelType": "Petrol",
+      "model": "Innova Crysta New",
+      "price": 2552000
+    },
+    {
+      "id": "5",
+      "make": "FORD",
+      "fuelType": "Diesel",
+      "model": "Endeavor",
+      "price": 60000000
+    },
+    {
+      "id": 6,
+      "make": "TATA",
+      "fuelType": "Petrol",
+      "model": "Defender",
+      "price": 2000000000
+    }
+  ]
+}
